@@ -13,3 +13,9 @@ To run the flask app, you need to use the following command:
     flask --app <filename> run
 
 You will get a link to the browser, where you can see all the updates.
+
+You can the basic app that will run in the app.py file
+
+Now you need to create a new folder called templates. This is where all the html pages will go.
+When you add the html file in templates folder, then the html file created will not have a meta
+tag. You can add that tag from vscode template.
