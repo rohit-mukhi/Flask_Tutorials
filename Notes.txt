@@ -1,0 +1,15 @@
+By far this is the most frustrating setup I have done.
+
+To setup a python project, open pycharm, clone a github repo you want to work in.
+Then pycharm will ask you to set up an interpreter, do it. Do not select create a new venv, select
+existing venv.
+
+Then use pip install to download all dependencies, here a dependency is flask.
+You need to create a requirements.txt file by using the following command:
+    pip freeze > reqirements.txt
+
+To run the flask app, you need to use the following command:
+
+    flask --app <filename> run
+
+You will get a link to the browser, where you can see all the updates.
