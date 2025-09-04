@@ -4,9 +4,15 @@ To setup a python project, open pycharm, clone a github repo you want to work in
 Then pycharm will ask you to set up an interpreter, do it. Do not select create a new venv, select
 existing venv.
 
+Do not forget to activate the venv!!!!
+
 Then use pip install to download all dependencies, here a dependency is flask.
 You need to create a requirements.txt file by using the following command:
     pip freeze > reqirements.txt
+
+In development, you need to install the dependencies so you have the reqirements.txt file listing all the dependencies. To install the dependencies in the reqirements.txt file use the following command:
+
+    pip install -r reqirements.txt
 
 To run the flask app, you need to use the following command:
 
@@ -19,3 +25,11 @@ You can the basic app that will run in the app.py file
 Now you need to create a new folder called templates. This is where all the html pages will go.
 When you add the html file in templates folder, then the html file created will not have a meta
 tag. You can add that tag from vscode template.
+
+*************************************************************************************************************
+
+In a flask application, the templates files are for storing html files only. Nothing else.
+To store any css, js or images, we need to have another folder called static. This folder named static must 
+have again 3 folders for css, js and images respectively. This is standard and recommended for good 
+performance of a flask project.
+
