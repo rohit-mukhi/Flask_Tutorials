@@ -33,3 +33,28 @@ To store any css, js or images, we need to have another folder called static. Th
 have again 3 folders for css, js and images respectively. This is standard and recommended for good 
 performance of a flask project.
 
+**************************************************************************************************************
+
+So in flask we deal with templates. You can use requests package to fetch data from api. Then You can pass the 
+data as argument when you render a template. You can create whole divs and re-usable components in templates 
+and use them in different pages using:
+
+    {% include <templateName.html> %}
+
+Here for looping is done as;
+
+    {% for item in items %}
+    {% endfor %}
+
+Conditionals is done as follows:
+
+    {% if logged_in %}
+    <h2>Welcome back, user!</h2>
+    <a href="/logout">Logout</a>
+{% else %}
+    <h2>Please log in to continue.</h2>
+    <a href="/login">Login</a>
+{% endif %}
+ 
+The above is just a sample code.
+
