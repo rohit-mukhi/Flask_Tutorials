@@ -21,16 +21,24 @@ def hello_world():
 def about():
     return render_template('about.html')
 
+# Below is how you can send some form data to another page
+# First you need to import request, redirect and url_for methods from flask
+# Then you need to create a route to move the data into routes as done below
+
 @app.route('/submit_data', methods=['POST'])
 def submit_data():
     if request.method == 'POST':
         username = request.form['username']
         return redirect(url_for('display', username=username))
     
+# the above code will intercept the data and redirect the user to a different page with the data
+
+# Then the below code is used to render the display page with the the info grabbed from the source page
+    
 @app.route('/display')
 def display():
     username = request.args.get('username')
-    return render_template('display.html')
+    return render_template('display.html', username=username)
 
 
 
