@@ -9,11 +9,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    data = None
-    response = requests.get("http://www.omdbapi.com/?apikey=50571acc&" + "s=swades")
-    if response.status_code == 200:
-        data = response.json()
-    return render_template('index.html', arr = data['Search'])
+    # data = None
+    # response = requests.get("http://www.omdbapi.com/?apikey=50571acc&" + "s=swades")
+    # if response.status_code == 200:
+    #     data = response.json()
+    # return render_template('index.html', arr = data['Search'])
+    return render_template('index.html')
 
 # Below is how you can run the app without typing the command: flask --app app run everytime
 
