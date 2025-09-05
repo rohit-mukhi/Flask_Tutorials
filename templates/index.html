@@ -135,7 +135,10 @@
                     <div class="card-body">
                         <h5 class="card-title text-light">Get Your Reports</h5>
                         <p class="card-text text-light">Get your digital reports instantly online</p>
-                        <a href="#" class="btn btn-success">Get Report</a>
+                        <form action="/submit_data" method="post">
+                            <input type="text" name="username" id="username" placeholder="username">
+                            <button class="bg-success mt-2" type="submit" value="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv # The python-dotenv package is required to load the environment variables
 import os
 import requests
+
 
 load_dotenv() # This is how you can load the environment varibales in the file.
 
@@ -19,6 +20,19 @@ def hello_world():
 @app.route("/about")
 def about():
     return render_template('about.html')
+
+@app.route('/submit_data', methods=['POST'])
+def submit_data():
+    if request.method == 'POST':
+        username = request.form['username']
+        return redirect(url_for('display', username=username))
+    
+@app.route('/display')
+def display():
+    username = request.args.get('username')
+    return render_template('display.html')
+
+
 
 # Below is how you can run the app without typing the command: flask --app app run everytime
 
