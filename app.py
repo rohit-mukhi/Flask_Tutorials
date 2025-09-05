@@ -16,6 +16,10 @@ def hello_world():
     # return render_template('index.html', arr = data['Search'])
     return render_template('index.html')
 
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
 # Below is how you can run the app without typing the command: flask --app app run everytime
 
 if __name__ == "__main__":
